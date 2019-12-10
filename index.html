@@ -41,6 +41,49 @@
   </div>
 
 </div><!-- end container -->
+  <html> 
+
+
+
+<h4> TEST WEBSITE </h4>
+<p>Welcome to my test website...</p>
+<hr></hr>
+
+ <div>
+  <img src="IMG_7192.JPG" align="right" style="transform:rotate(90deg);" height="100" width="150"> 
+</div>
+
+
+<div>
+
+    <div>
+      <h1>Data Input for Baltimore Neighborhood and Quadrant</h1>
+    </div>
+
+    <div>
+      <label for="name">Enter Addres (i.e "Street City State Zip"):</label>
+      <input type="text" id="full_address" name="full_address" required size="100">
+    </div>
+
+
+    <div>
+       <button onclick="doWork();">Submit</button>
+    </div>
+
+</div>
+
+<div><hr></div>
+
+<script>
+function doWork() {
+  var arr = {'fn': document.getElementById("full_address").value,
+  			   };
+  $.post( "/pythonfunction", arr, function() {
+  });
+}
+</script>
+
+
 <script src="/FLASK_WEBSITE/static/js/script.js"></script>
 </body>
 </html>
